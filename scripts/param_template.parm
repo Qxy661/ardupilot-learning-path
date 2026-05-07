@@ -1,0 +1,150 @@
+# ArduPilot 参数模板 — 四旋翼基础调参
+# 使用方法: 在 Mission Planner 中导入, 或通过 MAVProxy 加载
+
+# ============================================================
+# 角速率环 (内环)
+# ============================================================
+
+# 滚转角速率
+ATC_RAT_RLL_P,0.135
+ATC_RAT_RLL_I,0.135
+ATC_RAT_RLL_D,0.0036
+ATC_RAT_RLL_FF,0.0
+ATC_RAT_RLL_FLTT,20.0
+ATC_RAT_RLL_FLTE,0.0
+ATC_RAT_RLL_FLTD,0.0
+
+# 俯仰角速率
+ATC_RAT_PIT_P,0.135
+ATC_RAT_PIT_I,0.135
+ATC_RAT_PIT_D,0.0036
+ATC_RAT_PIT_FF,0.0
+ATC_RAT_PIT_FLTT,20.0
+ATC_RAT_PIT_FLTE,0.0
+ATC_RAT_PIT_FLTD,0.0
+
+# 偏航角速率
+ATC_RAT_YAW_P,0.18
+ATC_RAT_YAW_I,0.018
+ATC_RAT_YAW_D,0.0
+ATC_RAT_YAW_FF,0.0
+ATC_RAT_YAW_FLTT,20.0
+ATC_RAT_YAW_FLTE,0.0
+ATC_RAT_YAW_FLTD,0.0
+
+# ============================================================
+# 姿态环 (中环)
+# ============================================================
+
+ATC_ANG_RLL_P,4.5
+ATC_ANG_PIT_P,4.5
+ATC_ANG_YAW_P,4.5
+ATC_ANG_LIM_TC,0.5
+
+# ============================================================
+# 位置环 (外环)
+# ============================================================
+
+# 水平位置
+PSC_POSXY_P,1.0
+PSC_VELXY_P,2.0
+PSC_VELXY_I,1.0
+PSC_VELXY_D,0.5
+PSC_VELXY_FF,0.0
+PSC_VELXY_FLTT,20.0
+PSC_VELXY_FLTE,0.0
+PSC_VELXY_FLTD,0.0
+
+# 垂直位置
+PSC_POSZ_P,1.0
+PSC_VELZ_P,5.0
+PSC_VELZ_I,2.0
+PSC_VELZ_D,0.0
+PSC_VELZ_FF,0.0
+PSC_VELZ_FLTT,20.0
+PSC_VELZ_FLTE,0.0
+PSC_VELZ_FLTD,0.0
+
+# 速度限制
+PILOT_SPEED_UP,250
+PILOT_SPEED_DN,150
+PILOT_VELZ_MAX,250
+WPNAV_SPEED,500
+WPNAV_SPEED_DN,150
+WPNAV_RADIUS,200
+
+# ============================================================
+# 推力模型
+# ============================================================
+
+MOT_THST_EXPO,0.65
+MOT_THST_HOVER,0.35
+MOT_SPIN_MIN,0.15
+MOT_SPIN_MAX,0.95
+MOT_BAT_VOLT_MIN,0.0
+MOT_BAT_VOLT_MAX,0.0
+MOT_PWM_TYPE,0
+
+# ============================================================
+# 电池
+# ============================================================
+
+BATT_MONITOR,4
+BATT_CAPACITY,2200
+BATT_LOW_VOLT,14.0
+BATT_LOW_MAH,440
+BATT_CRT_VOLT,13.6
+BATT_CRT_MAH,220
+BATT_FS_LOW_ACT,1
+BATT_FS_CRT_ACT,1
+
+# ============================================================
+# GPS
+# ============================================================
+
+GPS_TYPE,1
+GPS_TYPE2,0
+GPS_AUTO_SWITCH,1
+GPS_MIN_ELEV,10
+GPS_INJECT_TO,127
+GPS_SBAS_MODE,0
+
+# ============================================================
+# EKF3
+# ============================================================
+
+EK3_IMU_MASK,7
+EK3_GPS_CHECK,31
+EK3_MAG_CAL,3
+EK3_SRC1_POSXY,0
+EK3_SRC1_POSZ,0
+EK3_SRC1_VELXY,0
+EK3_SRC1_VELZ,0
+EK3_SRC1_YAW,0
+
+# ============================================================
+# 安全
+# ============================================================
+
+FENCE_ENABLE,1
+FENCE_TYPE,7
+FENCE_RADIUS,500
+FENCE_ALT_MAX,100
+FENCE_ACTION,1
+FENCE_MARGIN,2
+
+# 失控保护
+FS_THR_ENABLE,1
+FS_THR_VALUE,975
+FS_GCS_ENABLE,1
+FS_EKF_THRESH,0.8
+FS_DR_ENABLE,0
+
+# ============================================================
+# 日志
+# ============================================================
+
+LOG_BITMASK,830
+LOG_DISARMED,0
+LOG_REPLAY,0
+LOG_FILE_BUFSIZE,20
